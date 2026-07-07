@@ -86,7 +86,7 @@ export default function StaffPage() {
       </section>
 
       {/* Join us */}
-      <section className="section-padding" style={{ backgroundColor: "var(--section-alt)" }}>
+      {/* <section className="section-padding" style={{ backgroundColor: "var(--section-alt)" }}>
         <div className="container-max">
           <AnimatedSection>
             <div className="card p-12 text-center max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ export default function StaffPage() {
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
