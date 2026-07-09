@@ -157,7 +157,7 @@ export default function Footer() {
           <p className="text-xs text-[var(--muted)]">
             © 2026 T.K. Tailors. All rights reserved.
           </p>
-          <p className="text-xs text-[var(--muted)]">
+          <div className="text-xs text-[var(--muted)]">
             <Link href="https://ravishka.vercel.app/" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center gap-2">
                 Architected and Spearheaded by
@@ -186,11 +186,11 @@ export default function Footer() {
                     <text 
                       x="250" 
                       y="470" 
-                      text-anchor="middle" 
-                      font-family="system-ui, -apple-system, sans-serif" 
-                      font-size="80" 
-                      font-weight="950" 
-                      letter-spacing="10" 
+                      textAnchor="middle" 
+                      fontFamily="system-ui, -apple-system, sans-serif" 
+                      fontSize="80" 
+                      fontWeight="950" 
+                      letterSpacing="10" 
                       fill="url(#brandGradient)"
                     >
                       RAVISHKA
@@ -199,7 +199,7 @@ export default function Footer() {
                 </div>
               </div>
             </Link>
-          </p>
+          </div>
           {/* <Link
             href="/admin/login"
             className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
