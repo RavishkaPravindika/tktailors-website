@@ -25,7 +25,7 @@ export default function AboutPreview() {
                 className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl flex flex-col items-center justify-center shadow-elegant border"
                 style={{ backgroundColor: "var(--card-bg)", borderColor: "var(--border)" }}
               >
-                <span className="font-serif text-4xl font-bold text-[var(--foreground)]">35</span>
+                <span className="font-serif text-4xl font-bold text-[var(--foreground)]">56+</span>
                 <span className="text-xs text-[var(--muted)] tracking-wider uppercase text-center leading-tight mt-1">Years of<br />Excellence</span>
               </div>
             </div>
@@ -50,9 +50,9 @@ export default function AboutPreview() {
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 {[
-                  { value: "1989", label: "Founded" },
+                  { value: "1970", label: "Founded" },
                   { value: "3rd", label: "Generation" },
-                  { value: "5000+", label: "Clients Served" },
+                  { value: "100K", label: "Clients Served" },
                   { value: "100%", label: "Satisfaction" },
                 ].map((item) => (
                   <div key={item.label} className="border-l-2 pl-4" style={{ borderColor: "var(--border)" }}>

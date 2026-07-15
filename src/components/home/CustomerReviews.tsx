@@ -74,7 +74,7 @@ export default function CustomerReviews() {
             <ExternalLink size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
 
-          <a
+          {/* <a
             href="https://search.google.com/local/writereview?placeid=ChIJg_ar72Mu4joRs8YjkwN5t5I"
             target="_blank"
             rel="noopener noreferrer"
@@ -82,7 +82,7 @@ export default function CustomerReviews() {
           >
             Write a Review
             <Star size={15} className="fill-current" />
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

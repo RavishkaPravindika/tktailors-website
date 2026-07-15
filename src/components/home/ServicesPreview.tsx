@@ -10,7 +10,7 @@ const services = [
   { icon: Shirt, title: "Men's Suits", desc: "Bespoke suits tailored to perfection for every occasion." },
   { icon: Shirt, title: "Custom Shirts", desc: "Premium fitted shirts in your choice of fabric and style." },
   { icon: Scissors, title: "Trousers", desc: "Impeccably cut trousers with the perfect drape." },
-  { icon: GraduationCap, title: "School Uniforms", desc: "Durable, smart uniforms for all ages and institutions." },
+  { icon: GraduationCap, title: "Uniforms", desc: "Durable, smart uniforms for all ages and institutions." },
   { icon: Sparkles, title: "Ladies Wear", desc: "Elegant women's clothing for every occasion." },
   { icon: Scissors, title: "Alterations", desc: "Expert alterations to ensure every garment fits." },
   { icon: Star, title: "Wedding Suits", desc: "Luxurious wedding suits for your unforgettable day." },

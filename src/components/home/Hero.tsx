@@ -12,6 +12,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1920&q=85"
+          // src="/hero.jpeg"
           alt="Premium tailor workshop"
           fill
           priority
@@ -35,7 +36,7 @@ export default function Hero() {
             <div className="flex items-center gap-2">
               <Scissors className="w-4 h-4 text-white/60" />
               <span className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60">
-                Est. 1989 · Master Tailors
+                Est. 1970 · Master Tailors
               </span>
               <Scissors className="w-4 h-4 text-white/60 scale-x-[-1]" />
             </div>
@@ -78,8 +79,8 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             {[
-              { value: "35+", label: "Years Experience" },
-              { value: "5000+", label: "Happy Clients" },
+              { value: "56+", label: "Years Experience" },
+              { value: "100K+", label: "Happy Clients" },
               { value: "3", label: "Generations" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
