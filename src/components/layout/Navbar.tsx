@@ -73,7 +73,7 @@ export default function Navbar() {
             >
               <Scissors
                 className="w-4 h-4"
-                style={{ color: scrolled ? "var(--background)" : "var(--foreground)" }}
+                style={{ color: scrolled ? "var(--background)" : "#111111" }}
               />
             </div>
             <div>

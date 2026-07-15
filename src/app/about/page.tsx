@@ -76,7 +76,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         className="relative pt-40 pb-24 overflow-hidden"
-        style={{ backgroundColor: "var(--foreground)" }}
+        style={{ backgroundColor: "var(--hero-bg)" }}
       >
         <div className="container-max relative z-10">
           <AnimatedSection className="text-center">

@@ -81,7 +81,7 @@ export default function GuestBookPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-20" style={{ backgroundColor: "var(--foreground)" }}>
+      <section className="relative pt-40 pb-20" style={{ backgroundColor: "var(--hero-bg)" }}>
         <div className="container-max text-center">
           <AnimatedSection>
             <div className="flex items-center justify-center gap-3 mb-5">

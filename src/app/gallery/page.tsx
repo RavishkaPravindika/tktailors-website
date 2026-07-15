@@ -43,7 +43,7 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24" style={{ backgroundColor: "var(--foreground)" }}>
+      <section className="relative pt-40 pb-24" style={{ backgroundColor: "var(--hero-bg)" }}>
         <div className="container-max text-center">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/50 mb-4">
