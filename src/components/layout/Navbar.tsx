@@ -132,7 +132,7 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ThemeToggle />
+            <ThemeToggle scrolled={scrolled} />
 
             {/* Mobile hamburger */}
             <button
@@ -210,7 +210,7 @@ export default function Navbar() {
                   <div className="w-8 h-8 bg-[var(--foreground)] rounded-full flex items-center justify-center">
                     <Scissors className="w-3.5 h-3.5 text-[var(--background)]" />
                   </div>
-                  <span className="font-serif font-bold text-[var(--foreground)]">T.K. Tailors</span>
+                  <span className="font-serif font-bold text-[var(--foreground)]">T.K. Custom Tailors</span>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -253,7 +253,7 @@ export default function Navbar() {
               {/* Mobile footer */}
               <div className="absolute bottom-8 left-5 right-5">
                 <p className="text-xs text-[var(--muted)] text-center">
-                  © 2025 T.K. Tailors · Est. 1989
+                  © 2026 T.K. Custom Tailors · Est. 1970
                 </p>
               </div>
             </motion.div>
