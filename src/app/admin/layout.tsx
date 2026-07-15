@@ -60,7 +60,7 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
               <Scissors className="w-4 h-4 text-black" />
             </div>
             <div>
-              <p className="font-serif font-bold text-white text-sm">T.K. Tailors</p>
+              <p className="font-serif font-bold text-white text-sm">T.K. Custom Tailors</p>
               <p className="text-[10px] text-white/30 tracking-widest uppercase">Admin</p>
             </div>
           </div>

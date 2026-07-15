@@ -43,12 +43,12 @@ export default function Footer() {
                 <Scissors className="w-4 h-4 text-[var(--background)]" />
               </div>
               <div>
-                <span className="font-serif font-bold text-[var(--foreground)] text-lg">T.K. Tailors</span>
-                <p className="text-[10px] text-[var(--muted)] tracking-widest uppercase">Est. 1989</p>
+                <span className="font-serif font-bold text-[var(--foreground)] text-lg">T.K. Custom Tailors</span>
+                <p className="text-[10px] text-[var(--muted)] tracking-widest uppercase">Est. 1970</p>
               </div>
             </Link>
             <p className="text-sm text-[var(--muted)] leading-relaxed mb-5">
-              Three generations of master craftsmanship. Delivering elegance, precision, and perfect fit since 1989.
+              Three generations of master craftsmanship. Delivering elegance, precision, and perfect fit since 1970.
             </p>
             <div className="flex gap-3">
               <a

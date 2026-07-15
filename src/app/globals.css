@@ -16,6 +16,11 @@
   --nav-bg: rgba(255,255,255,0.95);
   --nav-border: rgba(0,0,0,0.08);
   --section-alt: #F9FAFB;
+  /* Hero sections use --foreground as bg (#111111 in light), so nav text must be white */
+  --nav-text-unscrolled: #ffffff;
+  --nav-text-unscrolled-muted: rgba(255,255,255,0.55);
+  --nav-hover-unscrolled: rgba(255,255,255,0.1);
+  --nav-active-unscrolled-bg: rgba(255,255,255,0.15);
 }
 
 .dark {
@@ -29,6 +34,11 @@
   --nav-bg: rgba(24,24,24,0.95);
   --nav-border: rgba(255,255,255,0.06);
   --section-alt: #1F1F1F;
+  /* Hero sections use --foreground as bg (#E5E7EB in dark), so nav text must be dark */
+  --nav-text-unscrolled: #111111;
+  --nav-text-unscrolled-muted: rgba(0,0,0,0.45);
+  --nav-hover-unscrolled: rgba(0,0,0,0.1);
+  --nav-active-unscrolled-bg: rgba(0,0,0,0.15);
 }
 
 * {
