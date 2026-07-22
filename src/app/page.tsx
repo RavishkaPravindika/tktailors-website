@@ -8,9 +8,9 @@ import CustomerReviews from "@/components/home/CustomerReviews";
 import ContactPreview from "@/components/home/ContactPreview";
 
 export const metadata: Metadata = {
-  title: "T.K. Tailors — Premium Tailoring & Bespoke Clothing",
+  title: "T.K. Custom Tailors — Premium Tailoring & Bespoke Clothing",
   description:
-    "T.K. Tailors offers premium bespoke tailoring, custom suits, wedding wear, school uniforms, and expert alterations. Over 35 years of craftsmanship.",
+    "T.K. Custom Tailors offers premium bespoke tailoring, custom suits, wedding wear, school uniforms, and expert alterations. Over 35 years of craftsmanship.",
 };
 
 export default function HomePage() {

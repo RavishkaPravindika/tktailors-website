@@ -40,7 +40,7 @@ const differentiators = [
 export const metadata: Metadata = {
   title: "Skills",
   description:
-    "Explore the full range of tailoring skills at T.K. Tailors — from bespoke suit design to expert alterations, traditional clothing, and premium stitching techniques.",
+    "Explore the full range of tailoring skills at T.K. Custom Tailors — from bespoke suit design to expert alterations, traditional clothing, and premium stitching techniques.",
 };
 
 export default function SkillsPage() {
@@ -81,11 +81,11 @@ export default function SkillsPage() {
               return (
                 <AnimatedSection key={item.title} delay={index * 0.1}>
                   <div
-                    className="card p-8 h-full flex flex-col items-center text-center gap-4 group hover:shadow-elegant transition-shadow duration-300"
+                    className="card p-8 h-full flex flex-col items-start text-left gap-4 group hover:shadow-elegant transition-shadow duration-300"
                     style={{ backgroundColor: "var(--background)" }}
                   >
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto group-hover:scale-110 transition-transform duration-300"
                       style={{ backgroundColor: "var(--muted-bg)" }}
                     >
                       <Icon className="w-6 h-6 text-[var(--foreground)]" />
@@ -94,7 +94,7 @@ export default function SkillsPage() {
                       <h3 className="font-serif text-lg font-bold text-[var(--foreground)] mb-2">
                         {item.title}
                       </h3>
-                      <div className="elegant-divider mx-auto mb-3" />
+                      <div className="elegant-divider mb-3" />
                       <p className="text-sm text-[var(--muted)] leading-relaxed">
                         {item.description}
                       </p>
@@ -112,11 +112,11 @@ export default function SkillsPage() {
               return (
                 <AnimatedSection key={item.title} delay={(index + 3) * 0.1} className="w-full sm:w-1/2">
                   <div
-                    className="card p-8 h-full flex flex-col items-center text-center gap-4 group hover:shadow-elegant transition-shadow duration-300"
+                    className="card p-8 h-full flex flex-col items-start text-left gap-4 group hover:shadow-elegant transition-shadow duration-300"
                     style={{ backgroundColor: "var(--background)" }}
                   >
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto group-hover:scale-110 transition-transform duration-300"
                       style={{ backgroundColor: "var(--muted-bg)" }}
                     >
                       <Icon className="w-6 h-6 text-[var(--foreground)]" />
@@ -125,7 +125,7 @@ export default function SkillsPage() {
                       <h3 className="font-serif text-lg font-bold text-[var(--foreground)] mb-2">
                         {item.title}
                       </h3>
-                      <div className="elegant-divider mx-auto mb-3" />
+                      <div className="elegant-divider mb-3" />
                       <p className="text-sm text-[var(--muted)] leading-relaxed">
                         {item.description}
                       </p>
@@ -199,14 +199,14 @@ export default function SkillsPage() {
             <SectionHeader
               eyebrow="Ready to Begin?"
               title="Let's Create Something Beautiful"
-              subtitle="Book a consultation with our master tailors and experience the T.K. Tailors difference."
+              subtitle="Book a consultation with our master tailors and experience the T.K. Custom Tailors difference."
             />
             <div className="mt-10 flex gap-4 justify-center flex-wrap">
               <a
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-[var(--foreground)] text-[var(--background)] font-semibold text-sm rounded-full hover:opacity-90 transition-all duration-200 hover:scale-105"
               >
-                Book a Consultation
+                Book an Appointment
               </a>
               <a
                 href="/gallery"

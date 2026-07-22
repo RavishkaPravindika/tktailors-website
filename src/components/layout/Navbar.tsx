@@ -66,7 +66,7 @@ export default function Navbar() {
         <div className="container-max flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div
+            {/* <div
               className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200"
               style={{
                 backgroundColor: scrolled ? "var(--foreground)" : "var(--nav-text-unscrolled)",
@@ -76,7 +76,8 @@ export default function Navbar() {
                 className="w-4 h-4"
                 style={{ color: scrolled ? "var(--background)" : "#111111" }}
               />
-            </div>
+            </div> */}
+            <img src="/icon.svg" alt="Logo" width={50} height={50} className="p-0.5"></img>
             <div>
               <span
                 className="font-serif font-bold text-lg tracking-tight leading-none"
@@ -106,9 +107,9 @@ export default function Navbar() {
                   href={link.href}
                   className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                   style={{
-                    color: isActive
-                      ? (scrolled ? "var(--background)" : "var(--foreground)")
-                      : (scrolled ? "var(--foreground)" : "var(--nav-text-unscrolled)"),
+                    color: scrolled
+                      ? (isActive ? "var(--background)" : "var(--foreground)")
+                      : "var(--nav-text-unscrolled)",
                     backgroundColor: isActive
                       ? (scrolled ? "var(--foreground)" : "var(--nav-active-unscrolled-bg)")
                       : "transparent",
@@ -208,9 +209,10 @@ export default function Navbar() {
               {/* Mobile menu header */}
               <div className="flex items-center justify-between p-5 border-b" style={{ borderColor: "var(--border)" }}>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-[var(--foreground)] rounded-full flex items-center justify-center">
+                  {/* <div className="w-8 h-8 bg-[var(--foreground)] rounded-full flex items-center justify-center">
                     <Scissors className="w-3.5 h-3.5 text-[var(--background)]" />
-                  </div>
+                  </div> */}
+                  <img src="/icon.svg" alt="Logo" width={50} height={50} className="p-0.5"></img>
                   <span className="font-serif font-bold text-[var(--foreground)]">T.K. Custom Tailors</span>
                 </div>
                 <button

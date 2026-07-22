@@ -15,13 +15,13 @@ const timelineEvents = [
     year: "1970",
     title: "The Beginning",
     description:
-      "T.K. Karunaratne founded T.K. Tailors with a small workshop and a big dream — to bring precision tailoring to every customer.",
+      "T.K. Karunaratne founded T.K. Custom Tailors with a small workshop and a big dream — to bring precision tailoring to every customer.",
   },
   {
     year: "1998",
     title: "Growing Reputation",
     description:
-      "Word spread fast. Within a decade, T.K. Tailors had become the go-to tailor for weddings, corporate events, and school uniforms across the region.",
+      "Word spread fast. Within a decade, T.K. Custom Tailors had become the go-to tailor for weddings, corporate events, and school uniforms across the region.",
   },
   {
     year: "2005",
@@ -39,7 +39,7 @@ const timelineEvents = [
     year: "2018",
     title: "Award for Excellence",
     description:
-      "T.K. Tailors was recognized among the finest tailoring establishments in the region, a testament to our unwavering commitment to quality.",
+      "T.K. Custom Tailors was recognized among the finest tailoring establishments in the region, a testament to our unwavering commitment to quality.",
   },
   {
     year: "2024",
@@ -287,7 +287,7 @@ export default function AboutPage() {
             <SectionHeader
               eyebrow="Our Journey"
               title="A Timeline of Excellence"
-              subtitle="Key milestones that have shaped T.K. Tailors into the institution it is today."
+              subtitle="Key milestones that have shaped T.K. Custom Tailors into the institution it is today."
             />
           </AnimatedSection>
 

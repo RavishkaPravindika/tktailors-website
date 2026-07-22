@@ -8,7 +8,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 export const metadata: Metadata = {
   title: "Our Staff",
   description:
-    "Meet the talented team behind T.K. Tailors — master tailors and specialists with decades of combined experience in bespoke tailoring.",
+    "Meet the talented team behind T.K. Custom Tailors — master tailors and specialists with decades of combined experience in bespoke tailoring.",
 };
 
 export default function StaffPage() {
@@ -97,7 +97,7 @@ export default function StaffPage() {
                 Join Our Team
               </h2>
               <p className="text-[var(--muted)] mb-8 leading-relaxed">
-                Are you a skilled tailor with a passion for craftsmanship? We&apos;re always looking for talented individuals to join the T.K. Tailors family.
+                Are you a skilled tailor with a passion for craftsmanship? We&apos;re always looking for talented individuals to join the T.K. Custom Tailors family.
               </p>
               <a
                 href="mailto:careers@tktailors.lk"

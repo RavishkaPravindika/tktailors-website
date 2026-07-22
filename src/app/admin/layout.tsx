@@ -56,9 +56,10 @@ function AdminLayout({ children }: { children: React.ReactNode }) {
         >
           {/* Logo */}
           <div className="flex items-center gap-3 px-6 py-6 border-b border-white/10">
-            <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+            {/* <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center flex-shrink-0">
               <Scissors className="w-4 h-4 text-black" />
-            </div>
+            </div> */}
+            <img src="/icon.svg" alt="Logo" width={50} height={50} className="p-0.5"></img>
             <div>
               <p className="font-serif font-bold text-white text-sm">T.K. Custom Tailors</p>
               <p className="text-[10px] text-white/30 tracking-widest uppercase">Admin</p>

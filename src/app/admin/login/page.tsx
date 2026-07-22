@@ -60,13 +60,14 @@ export default function AdminLoginPage() {
       >
         {/* Logo */}
         <div className="text-center mb-10">
-          <motion.div
+          {/* <motion.div
             className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4"
             whileHover={{ scale: 1.05 }}
           >
             <Scissors className="w-7 h-7 text-black" />
-          </motion.div>
-          <h1 className="font-serif text-3xl font-bold text-white">T.K. Tailors</h1>
+          </motion.div> */}
+          <img src="/icon.svg" alt="Logo" width={50} height={50} className="p-0.5"></img>
+          <h1 className="font-serif text-3xl font-bold text-white">T.K. Custom Tailors</h1>
           <p className="text-white/40 text-xs mt-1.5 tracking-[0.2em] uppercase">Admin Panel</p>
         </div>
 
@@ -124,7 +125,7 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="text-center text-white/20 text-xs mt-6">
-          © {new Date().getFullYear()} T.K. Tailors. All rights reserved.
+          © {new Date().getFullYear()} T.K. Custom Tailors. All rights reserved.
         </p>
       </motion.div>
     </div>

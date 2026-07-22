@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
     <section className="section-padding" style={{ backgroundColor: "var(--section-alt)" }}>
       <div className="container-max">
         <SectionHeader
-          eyebrow="Why T.K. Tailors"
+          eyebrow="Why T.K. Custom Tailors"
           title="Why Choose Us"
           subtitle="We combine traditional craftsmanship with modern precision to deliver an experience that exceeds expectations."
         />

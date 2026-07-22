@@ -94,7 +94,7 @@ export default function ContactPage() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="T.K. Tailors Location"
+          title="T.K. Custom Tailors Location"
         />
         <div className="absolute bottom-4 right-4">
           <a
