@@ -45,14 +45,14 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight mb-6">
-            Crafted for
+            The Art
             <br />
-            <span className="italic text-white/80">Excellence</span>
+            <span className="italic text-white/80">of the Perfect Fit</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">
-            Three generations of bespoke tailoring mastery. Every stitch tells a story of craftsmanship, precision, and timeless elegance.
+            Generations of craftsmanship. One signature of excellence.
           </p>
 
           {/* CTA Buttons */}
@@ -61,13 +61,13 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide rounded-full hover:bg-white/90 hover:scale-105 transition-all duration-200 shadow-lg"
             >
-              Book a Consultation
+              Book an Appointment
             </Link>
             <Link
               href="/gallery"
               className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white font-semibold text-sm tracking-wide rounded-full hover:bg-white/10 hover:border-white/70 hover:scale-105 transition-all duration-200"
             >
-              View Our Work
+              Explore Our Craft
             </Link>
           </div>
 

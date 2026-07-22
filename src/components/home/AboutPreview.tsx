@@ -42,10 +42,10 @@ export default function AboutPreview() {
               </h2>
               <div className="elegant-divider mb-6" />
               <p className="text-[var(--muted)] leading-relaxed mb-4">
-                Founded in 1989 by Master Tailor T.K. Karunaratne, T.K. Tailors began as a humble workshop with a singular vision: to craft garments that combine artisanal precision with modern elegance.
+                Since 1970, T.K. Custom Tailors has carried a three-generation legacy of craftsmanship and excellence. From our founder, Thenkutti Suvinel Silva, through the second generation of Thenkutti Karunasena Silva, to our present CEO, Thenkutti Dumindu Shemal Silva, our journey continues to evolve.
               </p>
               <p className="text-[var(--muted)] leading-relaxed mb-8">
-                Three generations later, we remain committed to the same values — every piece is made with the same patience, skill, and personal attention that has earned us the trust of thousands of loyal customers.
+                Today, we combine generations of tailoring expertise with modern design and unique cutting techniques to create garments crafted for individuality, confidence, and excellence.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
