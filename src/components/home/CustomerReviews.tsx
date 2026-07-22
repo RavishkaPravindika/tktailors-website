@@ -6,22 +6,10 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex gap-0.5">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <Star
-          key={star}
-          size={14}
-          className={star <= rating ? "fill-[#FBBC04] text-[#FBBC04]" : "fill-gray-300 text-gray-300"}
-        />
-      ))}
-    </div>
-  );
-}
+import { useTheme } from "next-themes";
 
 export default function CustomerReviews() {
+  const { resolvedTheme } = useTheme();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 

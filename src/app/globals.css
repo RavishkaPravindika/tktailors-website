@@ -240,3 +240,17 @@ a, button, [role="button"] {
 .flip-animation {
   animation: flipPage 0.8s cubic-bezier(0.645, 0.045, 0.355, 1.000) forwards;
 }
+
+/* ─── Elfsight Google Reviews Dark & Light Mode Theme Adaptability ─── */
+[class*="elfsight-app"] {
+  transition: filter 0.3s ease, background-color 0.3s ease;
+}
+
+.dark [class*="elfsight-app"] {
+  color-scheme: dark;
+  filter: invert(0.92) hue-rotate(180deg) contrast(1.05);
+}
+
+.dark [class*="elfsight-app"] img {
+  filter: invert(1) hue-rotate(180deg);
+}

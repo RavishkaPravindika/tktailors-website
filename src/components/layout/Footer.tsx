@@ -56,7 +56,7 @@ export default function Footer() {
               {/* Facebook */}
               <a
                 href="https://www.facebook.com/TKCustomTailors"
-                target="blank"
+                target="_blank"
                 aria-label="Facebook"
                 className="w-9 h-9 rounded-lg border flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] hover:border-[var(--foreground)] transition-all duration-200"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}
@@ -68,7 +68,7 @@ export default function Footer() {
               {/* Instagram */}
               {/* <a
                 href="#"
-                target="blank"
+                target="_blank"
                 aria-label="Instagram"
                 className="w-9 h-9 rounded-lg border flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] hover:border-[var(--foreground)] transition-all duration-200"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}
@@ -82,7 +82,7 @@ export default function Footer() {
               {/* WhatsApp */}
               <a
                 href={settings?.whatsapp ? `https://wa.me/${settings.whatsapp.replace(/[^0-9+]/g, '')}` : "https://wa.me/94XXXXXXXXX"}
-                target="blank"
+                target="_blank"
                 aria-label="WhatsApp"
                 className="w-9 h-9 rounded-lg border flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] hover:border-[var(--foreground)] transition-all duration-200"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}
@@ -94,7 +94,7 @@ export default function Footer() {
               {/* YouTube */}
               {/* <a
                 href="#"
-                target="blank"
+                target="_blank"
                 aria-label="YouTube"
                 className="w-9 h-9 rounded-lg border flex items-center justify-center hover:bg-[var(--foreground)] hover:text-[var(--background)] hover:border-[var(--foreground)] transition-all duration-200"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}
