@@ -69,9 +69,9 @@ export default function AdminGuestBookPage() {
       setPreviewUrl(null);
       setSelectedFile(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      setUploadError("Upload failed. Check your ImageBB API key in .env.local and try again.");
+      setUploadError(err?.message || "Upload failed. Please try again.");
     } finally {
       setUploading(false);
     }
