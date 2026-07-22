@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/skills", label: "Skills" },
+  { href: "/craft", label: "Our Craft" },
   { href: "/staff", label: "Staff" },
   { href: "/gallery", label: "Gallery" },
   { href: "/guest-book", label: "Guest Book" },
@@ -87,7 +88,7 @@ export default function Navbar() {
                 className="text-[10px] tracking-widest uppercase leading-none mt-0.5"
                 style={{ color: scrolled ? "var(--muted)" : "var(--nav-text-unscrolled)" }}
               >
-                Est. 1970
+                Since 1970
               </p>
             </div>
           </Link>

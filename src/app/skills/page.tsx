@@ -1,9 +1,41 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Users, Scissors, User, Star, Sparkles } from "lucide-react";
 import { skills } from "@/data/skills";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeader from "@/components/ui/SectionHeader";
+
+const differentiators = [
+  {
+    icon: Users,
+    title: "Generations of Expertise",
+    description: "A legacy of tailoring passed down through three generations.",
+  },
+  {
+    icon: Scissors,
+    title: "Signature Cutting",
+    description:
+      "Our unique cutting techniques help create distinctive garments with an exceptional fit.",
+  },
+  {
+    icon: User,
+    title: "Crafted Around You",
+    description:
+      "Every garment is tailored to the individual's measurements, preferences, and personality.",
+  },
+  {
+    icon: Star,
+    title: "Quality Without Compromise",
+    description:
+      "From fabric selection to the final stitch, we focus on detail and durability.",
+  },
+  {
+    icon: Sparkles,
+    title: "Tradition Meets Innovation",
+    description:
+      "We combine traditional craftsmanship with modern designs and techniques.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Skills",
@@ -29,6 +61,80 @@ export default function SkillsPage() {
               A craft perfected over three generations — every technique refined through years of practice and passion.
             </p>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* What Makes Us Different */}
+      <section className="section-padding" style={{ backgroundColor: "var(--section-alt)" }}>
+        <div className="container-max">
+          <AnimatedSection>
+            <SectionHeader
+              eyebrow="Our Edge"
+              title="What Makes Us Different?"
+            />
+          </AnimatedSection>
+
+          {/* Row 1 — 3 cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-14">
+            {differentiators.slice(0, 3).map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <AnimatedSection key={item.title} delay={index * 0.1}>
+                  <div
+                    className="card p-8 h-full flex flex-col items-center text-center gap-4 group hover:shadow-elegant transition-shadow duration-300"
+                    style={{ backgroundColor: "var(--background)" }}
+                  >
+                    <div
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+                      style={{ backgroundColor: "var(--muted-bg)" }}
+                    >
+                      <Icon className="w-6 h-6 text-[var(--foreground)]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-[var(--foreground)] mb-2">
+                        {item.title}
+                      </h3>
+                      <div className="elegant-divider mx-auto mb-3" />
+                      <p className="text-sm text-[var(--muted)] leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+
+          {/* Row 2 — 2 cards centred */}
+          <div className="mt-6 flex justify-center gap-6 flex-wrap sm:flex-nowrap sm:max-w-[calc(66.666%+24px)] mx-auto">
+            {differentiators.slice(3).map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <AnimatedSection key={item.title} delay={(index + 3) * 0.1} className="w-full sm:w-1/2">
+                  <div
+                    className="card p-8 h-full flex flex-col items-center text-center gap-4 group hover:shadow-elegant transition-shadow duration-300"
+                    style={{ backgroundColor: "var(--background)" }}
+                  >
+                    <div
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300"
+                      style={{ backgroundColor: "var(--muted-bg)" }}
+                    >
+                      <Icon className="w-6 h-6 text-[var(--foreground)]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-[var(--foreground)] mb-2">
+                        {item.title}
+                      </h3>
+                      <div className="elegant-divider mx-auto mb-3" />
+                      <p className="text-sm text-[var(--muted)] leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
+          </div>
         </div>
       </section>
 

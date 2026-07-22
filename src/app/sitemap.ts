@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://tktailors.lk";
-  const pages = ["/", "/about", "/skills", "/staff", "/gallery", "/guest-book", "/contact"];
+  const pages = ["/", "/about", "/skills", "/craft", "/staff", "/gallery", "/guest-book", "/contact"];
 
   return pages.map((path) => ({
     url: `${baseUrl}${path}`,

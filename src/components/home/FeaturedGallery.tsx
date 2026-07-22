@@ -22,7 +22,7 @@ const featuredImages = [
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1594938298603-c8148c4b4f6d?w=600&q=80",
+    src: "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80",
     alt: "Professional attire",
     category: "Formal",
     span: "",

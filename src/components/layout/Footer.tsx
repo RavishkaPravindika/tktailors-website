@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/skills", label: "Our Skills" },
+  { href: "/craft", label: "Our Craft" },
   { href: "/staff", label: "Our Staff" },
   { href: "/gallery", label: "Gallery" },
   { href: "/guest-book", label: "Guest Book" },
@@ -145,7 +146,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-[var(--muted)] mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-[var(--muted)] whitespace-pre-line">
-                  {settings?.address || "T.K. Tailors, Main Street,\nSri Lanka"}
+                  {settings?.address || "T.K. Custom Tailors, Galle Road,\nSri Lanka"}
                 </span>
               </li>
             </ul>
@@ -155,12 +156,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4" style={{ borderColor: "var(--border)" }}>
           <p className="text-xs text-[var(--muted)]">
-            © 2026 T.K. Tailors. All rights reserved.
+            © 2026 T.K. Custom Tailors. All rights reserved.
           </p>
           <div className="text-xs text-[var(--muted)]">
             <Link href="https://ravishka.vercel.app/" target="_blank" rel="noopener noreferrer">
               <div className="flex items-center gap-2">
-                Architected and Spearheaded by
+                Designed & Developed by
                 <div className='top-0 left-0 w-10 h-10 flex items-center justify-center text-white font-bold text-xl transition-all duration-300'>
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -200,12 +201,6 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-          {/* <Link
-            href="/admin/login"
-            className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
-          >
-            Admin
-          </Link> */}
         </div>
       </div>
     </footer>

@@ -47,7 +47,14 @@ export interface GalleryImage {
   id: string;
   src: string;
   alt: string;
-  category: "wedding" | "formal" | "casual" | "uniforms" | "alterations" | "interior";
+  category:
+    | "bespoke-suits"
+    | "wedding-wear"
+    | "formal-wear"
+    | "corporate"
+    | "school-uniforms"
+    | "ladies-collection"
+    | "craftsmanship";
   width: number;
   height: number;
 }

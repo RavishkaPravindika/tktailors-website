@@ -12,12 +12,13 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   { id: "all", label: "All" },
-  { id: "wedding", label: "Wedding" },
-  { id: "formal", label: "Formal" },
-  { id: "casual", label: "Casual" },
-  { id: "uniforms", label: "Uniforms" },
-  { id: "alterations", label: "Alterations" },
-  { id: "interior", label: "Shop Interior" },
+  { id: "bespoke-suits", label: "Bespoke Suits" },
+  { id: "wedding-wear", label: "Wedding Wear" },
+  { id: "formal-wear", label: "Formal Wear" },
+  { id: "corporate", label: "Corporate" },
+  { id: "school-uniforms", label: "School Uniforms" },
+  { id: "ladies-collection", label: "Ladies’ Collection" },
+  { id: "craftsmanship", label: "Craftsmanship" },
 ];
 
 export default function GalleryPage() {

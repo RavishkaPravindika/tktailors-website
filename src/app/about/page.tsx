@@ -94,6 +94,121 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Generations */}
+      <section className="section-padding" style={{ backgroundColor: "var(--section-alt)" }}>
+        <div className="container-max">
+          <AnimatedSection>
+            <SectionHeader
+              eyebrow="Family Legacy"
+              title="Three Generations. One Legacy."
+            />
+          </AnimatedSection>
+
+          {/* Row 1 — 3 tiles */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-14">
+            {[
+              {
+                era: "Since 1935",
+                title: "The Beginning",
+                description: "T.K. Custom Tailors was founded by Thenkutti Suvinel Silva.",
+                img: "/generations/gen1.png",
+                alt: "Founder Thenkutti Suvinel Silva",
+              },
+              {
+                era: "2nd Generation",
+                title: "The Legacy Continues",
+                description: "Thenkutti Karunasena Silva carried the craft forward.",
+                img: "/generations/gen2.png",
+                alt: "Thenkutti Karunasena Silva",
+              },
+              {
+                era: "3rd Generation - Today",
+                title: "A New Chapter",
+                description:
+                  "Under CEO Thenkutti Dumindu Shemal Silva, the business enters its third generation.",
+                img: "/generations/gen3.png",
+                alt: "CEO Thenkutti Dumindu Shemal Silva",
+              },
+            ].map((gen, index) => (
+              <AnimatedSection key={gen.era} delay={index * 0.12}>
+                <div
+                  className="card overflow-hidden flex flex-col h-full group"
+                  style={{ backgroundColor: "var(--background)" }}
+                >
+                  {/* Image */}
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={gen.img}
+                      alt={gen.alt}
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                    {/* Era badge */}
+                    <div
+                      className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                      style={{ backgroundColor: "var(--foreground)", color: "var(--background)" }}
+                    >
+                      {gen.era}
+                    </div>
+                  </div>
+
+                  {/* Text */}
+                  <div className="p-6 flex flex-col gap-2 flex-1">
+                    <h3 className="font-serif text-lg font-bold text-[var(--foreground)]">
+                      {gen.title}
+                    </h3>
+                    <div className="elegant-divider" />
+                    <p className="text-sm text-[var(--muted)] leading-relaxed">
+                      {gen.description}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Row 2 — 4th tile centred */}
+          <div className="mt-6 flex justify-center">
+            <AnimatedSection delay={0.36} className="w-full sm:w-[calc(33.333%-12px)]">
+              <div
+                className="card overflow-hidden flex flex-col group"
+                style={{ backgroundColor: "var(--background)" }}
+              >
+                {/* Image */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="/generations/gen4.png"
+                    alt="A global vision for TK Tailors"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                  {/* Era badge */}
+                  <div
+                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                    style={{ backgroundColor: "var(--foreground)", color: "var(--background)" }}
+                  >
+                    Tomorrow
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="p-6 flex flex-col gap-2">
+                  <h3 className="font-serif text-lg font-bold text-[var(--foreground)]">
+                    A Global Vision
+                  </h3>
+                  <div className="elegant-divider" />
+                  <p className="text-sm text-[var(--muted)] leading-relaxed">
+                    Taking Sri Lankan tailoring excellence to the world.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Story section */}
       <section className="section-padding" style={{ backgroundColor: "var(--background)" }}>
         <div className="container-max">
@@ -128,7 +243,7 @@ export default function AboutPage() {
               <div className="elegant-divider mb-6" />
               <div className="space-y-4 text-[var(--muted)] leading-relaxed">
                 <p>
-                  Established in 1950 as T.K. Custom Tailors by our founder, Thenkutti Suvinel Silva, our journey began with a passion for craftsmanship, precision, and the art of creating garments that reflect individuality.
+                  Established in 1935 as T.K. Custom Tailors by our founder, Thenkutti Suvinel Silva, our journey began with a passion for craftsmanship, precision, and the art of creating garments that reflect individuality.
                 </p>
                 <p>
                   Through the years, the legacy was carried forward by the second generation, Thenkutti Karunasena Silva, preserving the values and expertise that shaped the foundation of the business. Today, under the leadership of the third generation, CEO Thenkutti Dumindu Shemal Silva, the business continues to evolve while remaining deeply rooted in its heritage.

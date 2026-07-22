@@ -42,7 +42,7 @@ export default function AboutPreview() {
               </h2>
               <div className="elegant-divider mb-6" />
               <p className="text-[var(--muted)] leading-relaxed mb-4">
-                Since 1970, T.K. Custom Tailors has carried a three-generation legacy of craftsmanship and excellence. From our founder, Thenkutti Suvinel Silva, through the second generation of Thenkutti Karunasena Silva, to our present CEO, Thenkutti Dumindu Shemal Silva, our journey continues to evolve.
+                Since 1935, T.K. Custom Tailors has carried a three-generation legacy of craftsmanship and excellence. From our founder, Thenkutti Suvinel Silva, through the second generation of Thenkutti Karunasena Silva, to our present CEO, Thenkutti Dumindu Shemal Silva, our journey continues to evolve.
               </p>
               <p className="text-[var(--muted)] leading-relaxed mb-8">
                 Today, we combine generations of tailoring expertise with modern design and unique cutting techniques to create garments crafted for individuality, confidence, and excellence.

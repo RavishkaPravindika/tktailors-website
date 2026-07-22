@@ -26,7 +26,7 @@ export const skills: Skill[] = [
       "Button and detail customization",
       "Personal style consultation",
     ],
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4b4f6d?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
   },
   {
     id: "shirt-tailoring",
@@ -104,7 +104,7 @@ export const skills: Skill[] = [
       "Ceremonial garment specialists",
       "Heritage fabric knowledge",
     ],
-    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80",
   },
   {
     id: "precision-measurements",
