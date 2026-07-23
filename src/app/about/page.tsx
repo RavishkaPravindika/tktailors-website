@@ -167,45 +167,6 @@ export default function AboutPage() {
               </AnimatedSection>
             ))}
           </div>
-
-          {/* Row 2 — 4th tile centred */}
-          <div className="mt-6 flex justify-center">
-            <AnimatedSection delay={0.36} className="w-full sm:w-[calc(33.333%-12px)]">
-              <div
-                className="card overflow-hidden flex flex-col group"
-                style={{ backgroundColor: "var(--background)" }}
-              >
-                {/* Image */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden">
-                  <Image
-                    src="/generations/gen4.png"
-                    alt="A global vision for TK Tailors"
-                    fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                  />
-                  {/* Era badge */}
-                  <div
-                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
-                    style={{ backgroundColor: "var(--foreground)", color: "var(--background)" }}
-                  >
-                    Tomorrow
-                  </div>
-                </div>
-
-                {/* Text */}
-                <div className="p-6 flex flex-col gap-2">
-                  <h3 className="font-serif text-lg font-bold text-[var(--foreground)]">
-                    A Global Vision
-                  </h3>
-                  <div className="elegant-divider" />
-                  <p className="text-sm text-[var(--muted)] leading-relaxed">
-                    Taking Sri Lankan tailoring excellence to the world.
-                  </p>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
         </div>
       </section>
 
