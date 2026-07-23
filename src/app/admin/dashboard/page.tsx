@@ -63,7 +63,7 @@ export default function AdminDashboard() {
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Dashboard</h2>
-        <p className="text-gray-500 text-sm mt-1">Welcome back to the T.K. Tailors admin panel.</p>
+        <p className="text-gray-500 text-sm mt-1">Welcome back to the T.K. Custom Tailors admin panel.</p>
       </div>
 
       {/* Stats */}

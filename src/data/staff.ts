@@ -8,7 +8,7 @@ export const staffMembers: StaffMember[] = [
     position: "Master Tailor & Founder",
     yearsOfExperience: 35,
     specialization: "Bespoke Suits & Wedding Wear",
-    bio: "The visionary behind T.K. Tailors, with over three decades of mastery in the art of tailoring. Known for his uncompromising attention to detail and ability to translate a client's vision into a perfect garment.",
+    bio: "The visionary behind T.K. Custom Tailors, with over three decades of mastery in the art of tailoring. Known for his uncompromising attention to detail and ability to translate a client's vision into a perfect garment.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
   },
   {

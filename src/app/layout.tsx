@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,11 +20,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "T.K. Tailors — Premium Tailoring & Bespoke Clothing",
-    template: "%s | T.K. Tailors",
+    default: "T.K. Custom Tailors — Premium Tailoring & Bespoke Clothing",
+    template: "%s | T.K. Custom Tailors",
   },
   description:
-    "T.K. Tailors — Premium bespoke tailoring, custom suits, wedding wear, uniforms, and alterations. Over 35 years of craftsmanship and excellence.",
+    "T.K. Custom Tailors — Premium bespoke tailoring, custom suits, wedding wear, uniforms, and alterations. Over 35 years of craftsmanship and excellence.",
   keywords: [
     "tailors",
     "bespoke suits",
@@ -31,19 +32,23 @@ export const metadata: Metadata = {
     "wedding suits",
     "uniforms",
     "alterations",
-    "T.K. Tailors",
+    "T.K. Custom Tailors",
     "Sri Lanka tailors",
   ],
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     type: "website",
-    siteName: "T.K. Tailors",
-    title: "T.K. Tailors — Premium Tailoring & Bespoke Clothing",
+    siteName: "T.K. Custom Tailors",
+    title: "T.K. Custom Tailors — Premium Tailoring & Bespoke Clothing",
     description:
       "Premium bespoke tailoring with over 35 years of craftsmanship. Custom suits, wedding wear, uniforms, and expert alterations.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "T.K. Tailors — Premium Tailoring",
+    title: "T.K. Custom Tailors — Premium Tailoring",
     description: "Premium bespoke tailoring with over 35 years of craftsmanship.",
   },
 };
@@ -65,6 +70,7 @@ export default function RootLayout({
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

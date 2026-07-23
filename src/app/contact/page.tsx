@@ -9,39 +9,6 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { motion, AnimatePresence } from "framer-motion";
 
-const contactInfo = [
-  {
-    icon: Phone,
-    title: "Phone",
-    value: "+94 XX XXX XXXX",
-    href: "tel:+94XXXXXXXXX",
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    value: "+94 XX XXX XXXX",
-    href: "https://wa.me/94XXXXXXXXX",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    value: "info@tktailors.lk",
-    href: "mailto:info@tktailors.lk",
-  },
-  {
-    icon: MapPin,
-    title: "Address",
-    value: "T.K. Tailors, Main Street, Sri Lanka",
-    href: "https://maps.app.goo.gl/LesCBGYXMc33oGb59",
-  },
-];
-
-const businessHours = [
-  { day: "Monday – Friday", hours: "8:00 AM – 6:00 PM" },
-  { day: "Saturday", hours: "8:00 AM – 4:00 PM" },
-  { day: "Sunday", hours: "Closed" },
-];
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -81,6 +48,13 @@ export default function ContactPage() {
         createdAt: new Date().toISOString(),
         read: false,
       });
+
+      if (settings?.whatsapp) {
+        const whatsappNumber = settings.whatsapp.replace(/[^0-9+]/g, '');
+        const messageText = `*New Contact Form Message*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messageText)}`, '_blank');
+      }
+
       setSubmitted(true);
       setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
     } catch (err) {
@@ -97,7 +71,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24" style={{ backgroundColor: "var(--foreground)" }}>
+      <section className="relative pt-40 pb-24" style={{ backgroundColor: "var(--hero-bg)" }}>
         <div className="container-max text-center">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/50 mb-4">Get In Touch</p>
@@ -120,7 +94,7 @@ export default function ContactPage() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="T.K. Tailors Location"
+          title="T.K. Custom Tailors Location"
         />
         <div className="absolute bottom-4 right-4">
           <a
@@ -156,7 +130,7 @@ export default function ContactPage() {
                     { icon: MessageCircle, title: "WhatsApp", value: settings.whatsapp, href: `https://wa.me/${settings.whatsapp.replace(/[^0-9+]/g, '')}` },
                     { icon: Mail, title: "Email", value: settings.email, href: `mailto:${settings.email}` },
                     { icon: MapPin, title: "Address", value: settings.address, href: "https://maps.app.goo.gl/LesCBGYXMc33oGb59" }
-                  ] : contactInfo).map((item) => {
+                  ] : []).map((item) => {
                     const Icon = item.icon;
                     return (
                       <a
@@ -197,7 +171,7 @@ export default function ContactPage() {
                       { day: "Monday – Friday", hours: settings.businessHours.weekdays },
                       { day: "Saturday", hours: settings.businessHours.saturday },
                       { day: "Sunday", hours: settings.businessHours.sunday }
-                    ] : businessHours).map((bh) => (
+                    ] : []).map((bh) => (
                       <div
                         key={bh.day}
                         className="flex justify-between items-center text-sm"
@@ -316,12 +290,9 @@ export default function ContactPage() {
                             style={inputStyle}
                           >
                             <option value="">Select a subject</option>
-                            {/* <option>Bespoke Suit Enquiry</option>
-                            <option>Wedding Suit Consultation</option>
-                            <option>Uniform Order</option>
-                            <option>Alterations</option>
-                            <option>Fabric Enquiry</option>
-                            <option>General Enquiry</option> */}
+                            {(settings?.subjects || []).map((subject: string) => (
+                              <option key={subject} value={subject}>{subject}</option>
+                            ))}
                           </select>
                         </div>
 

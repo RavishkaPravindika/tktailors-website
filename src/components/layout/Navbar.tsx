@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/skills", label: "Skills" },
+  { href: "/craft", label: "Our Craft" },
   { href: "/staff", label: "Staff" },
   { href: "/gallery", label: "Gallery" },
   { href: "/guest-book", label: "Guest Book" },
@@ -65,15 +66,30 @@ export default function Navbar() {
         <div className="container-max flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 bg-[var(--foreground)] rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
-              <Scissors className="w-4 h-4 text-[var(--background)]" />
-            </div>
+            {/* <div
+              className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200"
+              style={{
+                backgroundColor: scrolled ? "var(--foreground)" : "var(--nav-text-unscrolled)",
+              }}
+            >
+              <Scissors
+                className="w-4 h-4"
+                style={{ color: scrolled ? "var(--background)" : "#111111" }}
+              />
+            </div> */}
+            <img src="/icon.svg" alt="Logo" width={50} height={50} className="p-0.5"></img>
             <div>
-              <span className="font-serif font-bold text-lg text-[var(--foreground)] tracking-tight leading-none">
-                T.K. Tailors
+              <span
+                className="font-serif font-bold text-lg tracking-tight leading-none"
+                style={{ color: scrolled ? "var(--foreground)" : "var(--nav-text-unscrolled)" }}
+              >
+                T.K. Custom Tailors
               </span>
-              <p className="text-[10px] text-[var(--muted)] tracking-widest uppercase leading-none mt-0.5">
-                Est. 1989
+              <p
+                className="text-[10px] tracking-widest uppercase leading-none mt-0.5"
+                style={{ color: scrolled ? "var(--muted)" : "var(--nav-text-unscrolled)" }}
+              >
+                Since 1970
               </p>
             </div>
           </Link>
@@ -89,12 +105,27 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={cn(
-                    "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
-                    isActive
-                      ? "bg-[var(--foreground)] text-[var(--background)]"
-                      : "text-[var(--foreground)] hover:bg-[var(--muted-bg)]"
-                  )}
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  style={{
+                    color: scrolled
+                      ? (isActive ? "var(--background)" : "var(--foreground)")
+                      : "var(--nav-text-unscrolled)",
+                    backgroundColor: isActive
+                      ? (scrolled ? "var(--foreground)" : "var(--nav-active-unscrolled-bg)")
+                      : "transparent",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLElement).style.backgroundColor = scrolled
+                        ? "var(--muted-bg)"
+                        : "var(--nav-hover-unscrolled)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+                    }
+                  }}
                 >
                   {link.label}
                 </Link>
@@ -103,14 +134,23 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ThemeToggle />
+            <ThemeToggle scrolled={scrolled} />
 
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-[var(--muted-bg)] transition-colors"
+              className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors"
+              style={{ backgroundColor: "transparent" }}
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
               aria-expanded={isOpen}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = scrolled
+                  ? "var(--muted-bg)"
+                  : "var(--nav-hover-unscrolled)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+              }}
             >
               <AnimatePresence mode="wait" initial={false}>
                 {isOpen ? (
@@ -121,7 +161,10 @@ export default function Navbar() {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <X className="w-5 h-5 text-[var(--foreground)]" />
+                    <X
+                      className="w-5 h-5"
+                      style={{ color: scrolled ? "var(--foreground)" : "var(--nav-text-unscrolled)" }}
+                    />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -131,7 +174,10 @@ export default function Navbar() {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <Menu className="w-5 h-5 text-[var(--foreground)]" />
+                    <Menu
+                      className="w-5 h-5"
+                      style={{ color: scrolled ? "var(--foreground)" : "var(--nav-text-unscrolled)" }}
+                    />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -163,10 +209,11 @@ export default function Navbar() {
               {/* Mobile menu header */}
               <div className="flex items-center justify-between p-5 border-b" style={{ borderColor: "var(--border)" }}>
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-[var(--foreground)] rounded-full flex items-center justify-center">
+                  {/* <div className="w-8 h-8 bg-[var(--foreground)] rounded-full flex items-center justify-center">
                     <Scissors className="w-3.5 h-3.5 text-[var(--background)]" />
-                  </div>
-                  <span className="font-serif font-bold text-[var(--foreground)]">T.K. Tailors</span>
+                  </div> */}
+                  <img src="/icon.svg" alt="Logo" width={50} height={50} className="p-0.5"></img>
+                  <span className="font-serif font-bold text-[var(--foreground)]">T.K. Custom Tailors</span>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -209,7 +256,7 @@ export default function Navbar() {
               {/* Mobile footer */}
               <div className="absolute bottom-8 left-5 right-5">
                 <p className="text-xs text-[var(--muted)] text-center">
-                  © 2025 T.K. Tailors · Est. 1989
+                  © 2026 T.K. Custom Tailors · Est. 1970
                 </p>
               </div>
             </motion.div>

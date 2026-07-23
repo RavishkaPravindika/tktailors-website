@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { ref, set, onValue } from "firebase/database";
 import { db } from "@/lib/firebase";
-import { Save, CheckCircle2 } from "lucide-react";
+import { Save, CheckCircle2, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Settings {
@@ -15,23 +15,26 @@ interface Settings {
   businessHoursSaturday: string;
   businessHoursSunday: string;
   mapEmbedUrl: string;
+  subjects: string[];
 }
 
 const defaultSettings: Settings = {
   phone: "+94 XX XXX XXXX",
   whatsapp: "+94 XX XXX XXXX",
   email: "info@tktailors.lk",
-  address: "T.K. Tailors, Main Street, Sri Lanka",
+  address: "T.K. Custom Tailors, Galle Road, Sri Lanka",
   businessHoursWeekday: "8:00 AM – 6:00 PM",
   businessHoursSaturday: "8:00 AM – 4:00 PM",
   businessHoursSunday: "Closed",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=...",
+  subjects: [],
 };
 
 export default function AdminSettingsPage() {
   const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [newSubject, setNewSubject] = useState("");
 
   useEffect(() => {
     const settingsRef = ref(db, "contact");
@@ -47,6 +50,7 @@ export default function AdminSettingsPage() {
           businessHoursSaturday: data.businessHours?.saturday || defaultSettings.businessHoursSaturday,
           businessHoursSunday: data.businessHours?.sunday || defaultSettings.businessHoursSunday,
           mapEmbedUrl: data.mapEmbedUrl || defaultSettings.mapEmbedUrl,
+          subjects: data.subjects || defaultSettings.subjects,
         });
       }
     });
@@ -66,6 +70,7 @@ export default function AdminSettingsPage() {
           sunday: settings.businessHoursSunday,
         },
         mapEmbedUrl: settings.mapEmbedUrl,
+        subjects: settings.subjects,
       });
       setSaved(true);
       setTimeout(() => setSaved(false), 3000);
@@ -163,6 +168,63 @@ export default function AdminSettingsPage() {
           placeholder="Paste your Google Maps embed URL here"
         />
         <p className="text-xs text-gray-400">Get this from Google Maps → Share → Embed a map → Copy the src URL.</p>
+      </div>
+
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 space-y-5">
+        <h3 className="font-semibold text-gray-900 border-b border-gray-100 pb-3">Contact Form Subjects</h3>
+        
+        <div className="space-y-3">
+          {settings.subjects?.map((subject, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <input
+                type="text"
+                value={subject}
+                onChange={(e) => {
+                  const newSubjects = [...settings.subjects];
+                  newSubjects[index] = e.target.value;
+                  setSettings({ ...settings, subjects: newSubjects });
+                }}
+                className={inputClass}
+              />
+              <button
+                onClick={() => {
+                  const newSubjects = settings.subjects.filter((_, i) => i !== index);
+                  setSettings({ ...settings, subjects: newSubjects });
+                }}
+                className="p-3 text-red-500 hover:bg-red-50 rounded-xl transition-colors shrink-0"
+              >
+                <X size={16} />
+              </button>
+            </div>
+          ))}
+          
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              value={newSubject}
+              onChange={(e) => setNewSubject(e.target.value)}
+              placeholder="Add new subject"
+              className={inputClass}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && newSubject.trim()) {
+                  setSettings({ ...settings, subjects: [...(settings.subjects || []), newSubject.trim()] });
+                  setNewSubject("");
+                }
+              }}
+            />
+            <button
+              onClick={() => {
+                if (newSubject.trim()) {
+                  setSettings({ ...settings, subjects: [...(settings.subjects || []), newSubject.trim()] });
+                  setNewSubject("");
+                }
+              }}
+              className="p-3 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-xl transition-colors flex items-center justify-center shrink-0"
+            >
+              <Plus size={16} />
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Save button */}

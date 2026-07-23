@@ -7,21 +7,21 @@ import { Eye, Target, Heart, Award, Users, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about T.K. Tailors — three generations of master tailoring excellence since 1989. Discover our story, values, and commitment to craftsmanship.",
+    "Learn about T.K. Custom Tailors — three generations of master tailoring excellence since 1970. Discover our story, values, and commitment to craftsmanship.",
 };
 
 const timelineEvents = [
   {
-    year: "1989",
+    year: "1970",
     title: "The Beginning",
     description:
-      "T.K. Karunaratne founded T.K. Tailors with a small workshop and a big dream — to bring precision tailoring to every customer.",
+      "T.K. Karunaratne founded T.K. Custom Tailors with a small workshop and a big dream — to bring precision tailoring to every customer.",
   },
   {
     year: "1998",
     title: "Growing Reputation",
     description:
-      "Word spread fast. Within a decade, T.K. Tailors had become the go-to tailor for weddings, corporate events, and school uniforms across the region.",
+      "Word spread fast. Within a decade, T.K. Custom Tailors had become the go-to tailor for weddings, corporate events, and school uniforms across the region.",
   },
   {
     year: "2005",
@@ -39,7 +39,7 @@ const timelineEvents = [
     year: "2018",
     title: "Award for Excellence",
     description:
-      "T.K. Tailors was recognized among the finest tailoring establishments in the region, a testament to our unwavering commitment to quality.",
+      "T.K. Custom Tailors was recognized among the finest tailoring establishments in the region, a testament to our unwavering commitment to quality.",
   },
   {
     year: "2024",
@@ -54,13 +54,13 @@ const values = [
     icon: Eye,
     title: "Our Vision",
     description:
-      "To be the most trusted name in bespoke tailoring — a place where every client feels valued, every garment is a masterpiece, and every experience is memorable.",
+      "To become a globally trusted Sri Lankan tailoring brand, renowned for timeless craftsmanship, perfect fit, and excellence without compromise.",
   },
   {
     icon: Target,
     title: "Our Mission",
     description:
-      "To craft garments of exceptional quality that perfectly complement every individual, delivered with warmth, integrity, and artisanal expertise that has been honed over three generations.",
+      "To craft exceptional garments through generations of expertise, precision, and innovation, creating confidence and individuality for every customer, everywhere.",
   },
   {
     icon: Heart,
@@ -76,12 +76,12 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         className="relative pt-40 pb-24 overflow-hidden"
-        style={{ backgroundColor: "var(--foreground)" }}
+        style={{ backgroundColor: "var(--hero-bg)" }}
       >
         <div className="container-max relative z-10">
           <AnimatedSection className="text-center">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/50 mb-4">
-              Est. 1989
+              Est. 1970
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-white leading-tight">
               Our Story
@@ -91,6 +91,121 @@ export default function AboutPage() {
               Three generations. One unwavering commitment to the art of tailoring.
             </p>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Generations */}
+      <section className="section-padding" style={{ backgroundColor: "var(--section-alt)" }}>
+        <div className="container-max">
+          <AnimatedSection>
+            <SectionHeader
+              eyebrow="Family Legacy"
+              title="Three Generations. One Legacy."
+            />
+          </AnimatedSection>
+
+          {/* Row 1 — 3 tiles */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-14">
+            {[
+              {
+                era: "Since 1935",
+                title: "The Beginning",
+                description: "T.K. Custom Tailors was founded by Thenkutti Suvinel Silva.",
+                img: "/generations/gen1.png",
+                alt: "Founder Thenkutti Suvinel Silva",
+              },
+              {
+                era: "2nd Generation",
+                title: "The Legacy Continues",
+                description: "Thenkutti Karunasena Silva carried the craft forward.",
+                img: "/generations/gen2.png",
+                alt: "Thenkutti Karunasena Silva",
+              },
+              {
+                era: "3rd Generation - Today",
+                title: "A New Chapter",
+                description:
+                  "Under CEO Thenkutti Dumindu Shemal Silva, the business enters its third generation.",
+                img: "/generations/gen3.png",
+                alt: "CEO Thenkutti Dumindu Shemal Silva",
+              },
+            ].map((gen, index) => (
+              <AnimatedSection key={gen.era} delay={index * 0.12}>
+                <div
+                  className="card overflow-hidden flex flex-col h-full group"
+                  style={{ backgroundColor: "var(--background)" }}
+                >
+                  {/* Image */}
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={gen.img}
+                      alt={gen.alt}
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                    {/* Era badge */}
+                    <div
+                      className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                      style={{ backgroundColor: "var(--foreground)", color: "var(--background)" }}
+                    >
+                      {gen.era}
+                    </div>
+                  </div>
+
+                  {/* Text */}
+                  <div className="p-6 flex flex-col gap-2 flex-1">
+                    <h3 className="font-serif text-lg font-bold text-[var(--foreground)]">
+                      {gen.title}
+                    </h3>
+                    <div className="elegant-divider" />
+                    <p className="text-sm text-[var(--muted)] leading-relaxed">
+                      {gen.description}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Row 2 — 4th tile centred */}
+          <div className="mt-6 flex justify-center">
+            <AnimatedSection delay={0.36} className="w-full sm:w-[calc(33.333%-12px)]">
+              <div
+                className="card overflow-hidden flex flex-col group"
+                style={{ backgroundColor: "var(--background)" }}
+              >
+                {/* Image */}
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="/generations/gen4.png"
+                    alt="A global vision for TK Tailors"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                  {/* Era badge */}
+                  <div
+                    className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase"
+                    style={{ backgroundColor: "var(--foreground)", color: "var(--background)" }}
+                  >
+                    Tomorrow
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="p-6 flex flex-col gap-2">
+                  <h3 className="font-serif text-lg font-bold text-[var(--foreground)]">
+                    A Global Vision
+                  </h3>
+                  <div className="elegant-divider" />
+                  <p className="text-sm text-[var(--muted)] leading-relaxed">
+                    Taking Sri Lankan tailoring excellence to the world.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
@@ -123,25 +238,31 @@ export default function AboutPage() {
             <AnimatedSection direction="left" delay={0.1}>
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[var(--muted)] mb-4">The Founding Story</p>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-[var(--foreground)] leading-tight mb-5">
-                From a Small Workshop to a Legacy of Excellence
+                A Legacy of Craftsmanship. Three Generations of Excellence.
               </h2>
               <div className="elegant-divider mb-6" />
               <div className="space-y-4 text-[var(--muted)] leading-relaxed">
                 <p>
-                  In 1989, T.K. Karunaratne set up a modest tailoring workshop with a needle, thread, and an extraordinary vision. With hands trained by years of apprenticeship and a mind full of creative ideas, he began crafting garments that didn&apos;t just fit — they transformed.
+                  Established in 1935 as T.K. Custom Tailors by our founder, Thenkutti Suvinel Silva, our journey began with a passion for craftsmanship, precision, and the art of creating garments that reflect individuality.
                 </p>
                 <p>
-                  His reputation for precision and personal attention grew quickly. Customers who came for a school uniform returned for their wedding suit. Those who came for alterations left with entire wardrobes designed and crafted by his skilled hands.
+                  Through the years, the legacy was carried forward by the second generation, Thenkutti Karunasena Silva, preserving the values and expertise that shaped the foundation of the business. Today, under the leadership of the third generation, CEO Thenkutti Dumindu Shemal Silva, the business continues to evolve while remaining deeply rooted in its heritage.
                 </p>
                 <p>
-                  By the early 2000s, T.K. Tailors had become more than a business — it was a community institution. A place where generations of families brought their most important moments, knowing they&apos;d leave looking and feeling their very best.
+                  From its humble beginnings as a small tailoring shop, T.K. Custom Tailors has grown into a premium tailoring business offering a diverse range of custom clothing solutions, including bespoke suits, formalwear, wedding attire, corporate uniforms, school uniforms, ladies’ tailoring, and professional alterations.
+                </p>
+                <p>
+                  Our identity is built on generations of experience, unique cutting techniques, precise craftsmanship, premium quality, and a commitment to creating garments that are truly individual. Every piece we create carries not only the skill of our craftsmen, but also the legacy of the family behind the name.
+                </p>
+                <p>
+                  As we move forward as TK Tailors (Pvt) Ltd, our vision is to take this three-generation legacy beyond borders and establish a globally recognized Sri Lankan tailoring brand—bringing our craftsmanship, creativity, and commitment to excellence to customers around the world.
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {[
-                  { icon: Award, value: "35+", label: "Years" },
-                  { icon: Users, value: "5000+", label: "Clients" },
+                  { icon: Award, value: "56+", label: "Years" },
+                  { icon: Users, value: "100K+", label: "Clients" },
                   { icon: Clock, value: "3rd", label: "Generation" },
                 ].map((stat) => {
                   const Icon = stat.icon;
@@ -166,7 +287,7 @@ export default function AboutPage() {
             <SectionHeader
               eyebrow="Our Journey"
               title="A Timeline of Excellence"
-              subtitle="Key milestones that have shaped T.K. Tailors into the institution it is today."
+              subtitle="Key milestones that have shaped T.K. Custom Tailors into the institution it is today."
             />
           </AnimatedSection>
 

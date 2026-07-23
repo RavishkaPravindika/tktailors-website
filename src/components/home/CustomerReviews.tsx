@@ -6,22 +6,10 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex gap-0.5">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <Star
-          key={star}
-          size={14}
-          className={star <= rating ? "fill-[#FBBC04] text-[#FBBC04]" : "fill-gray-300 text-gray-300"}
-        />
-      ))}
-    </div>
-  );
-}
+import { useTheme } from "next-themes";
 
 export default function CustomerReviews() {
+  const { resolvedTheme } = useTheme();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -74,7 +62,7 @@ export default function CustomerReviews() {
             <ExternalLink size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
 
-          <a
+          {/* <a
             href="https://search.google.com/local/writereview?placeid=ChIJg_ar72Mu4joRs8YjkwN5t5I"
             target="_blank"
             rel="noopener noreferrer"
@@ -82,7 +70,7 @@ export default function CustomerReviews() {
           >
             Write a Review
             <Star size={15} className="fill-current" />
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

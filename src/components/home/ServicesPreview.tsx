@@ -7,14 +7,14 @@ import { ArrowRight, Scissors, Shirt, GraduationCap, Star, Briefcase, Sparkles }
 import SectionHeader from "@/components/ui/SectionHeader";
 
 const services = [
-  { icon: Shirt, title: "Men's Suits", desc: "Bespoke suits tailored to perfection for every occasion." },
+  { icon: Shirt, title: "Bespoke Tailoring", desc: "Garments designed and crafted specifically for your measurements and style." },
   { icon: Shirt, title: "Custom Shirts", desc: "Premium fitted shirts in your choice of fabric and style." },
   { icon: Scissors, title: "Trousers", desc: "Impeccably cut trousers with the perfect drape." },
-  { icon: GraduationCap, title: "School Uniforms", desc: "Durable, smart uniforms for all ages and institutions." },
+  { icon: GraduationCap, title: "Formal Wear", desc: "Refined garments designed for professional and formal occasions." },
   { icon: Sparkles, title: "Ladies Wear", desc: "Elegant women's clothing for every occasion." },
-  { icon: Scissors, title: "Alterations", desc: "Expert alterations to ensure every garment fits." },
-  { icon: Star, title: "Wedding Suits", desc: "Luxurious wedding suits for your unforgettable day." },
-  { icon: Briefcase, title: "Corporate Uniforms", desc: "Professional uniforms representing your brand." },
+  { icon: Scissors, title: "School Uniforms", desc: "Quality, comfort, and consistency for everyday wear." },
+  { icon: Star, title: "Wedding & Occasion Wear", desc: "Tailored elegance for the moments that matter most." },
+  { icon: Briefcase, title: "Corporate Uniforms", desc: "Professional clothing solutions designed to represent your brand." },
 ];
 
 export default function ServicesPreview() {
